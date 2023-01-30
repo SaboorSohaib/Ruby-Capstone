@@ -169,6 +169,13 @@ You can deploy this project using:
 - LinkedIn: [@SaboorSohaib](https://www.linkedin.com/in/abdul-saboor-sohaib/)
 
 
+**Rashid Menhas**
+
+GitHub: [@SaboorSohaib](https://github.com/RashidMenhas)
+- Twitter: [@SaboorSohaib](https://twitter.com/RashidM83664789)
+- LinkedIn: [@SaboorSohaib](https://www.linkedin.com/in/rashid-menhas/)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
