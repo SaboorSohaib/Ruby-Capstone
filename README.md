@@ -137,15 +137,6 @@ Clone this repository to your desired folder:
  - git clone [(https://github.com/SaboorSohaib/Ruby-Capstone.git)]
 
 
-### Install
-
-Install this project with:
-
-**you can run any one of these commands to install npm on your machine:**
-
-- npm i
-- npm install
-- sudo apt install npm
 
 ### Usage
 
