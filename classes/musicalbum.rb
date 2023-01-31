@@ -8,4 +8,5 @@ class MusicAlbum < item
 
   def can_be_archived?
     super && on_spotify
+  end
 end
