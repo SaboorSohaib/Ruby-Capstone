@@ -8,4 +8,9 @@ class Lable
     @color = color
     @itmes = []
   end
+
+  def add_item(item)
+    @itmes.push(item)
+    item.lable = self
+  end
 end
