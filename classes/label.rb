@@ -1,1 +1,3 @@
-puts 'this is lable class'
+class Lable
+  puts 'This is lable class'
+end
