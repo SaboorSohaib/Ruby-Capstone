@@ -1,3 +1,3 @@
-class Game 
+class Game < item
     puts "Game Class"
 end
