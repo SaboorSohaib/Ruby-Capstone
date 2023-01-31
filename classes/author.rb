@@ -1,3 +1,3 @@
-class author
-    puts "Author"
+class Author
+  puts 'Author'
 end
