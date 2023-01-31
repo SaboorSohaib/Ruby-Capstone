@@ -1,16 +1,16 @@
 class Lable
   attr_accessor :title, :color
-  attr_reader :itme
+  attr_reader :items
 
-  def initialize(_id, title, color, _itmes)
+  def initialize(_id, title, color)
     @id = Random.rand(1..1000)
     @title = title
     @color = color
-    @itmes = []
+    @items = []
   end
 
   def add_item(item)
-    @itmes.push(item)
+    @items.push(item)
     item.lable = self
   end
 end
