@@ -1,4 +1,5 @@
 require_relative '../classes/musicalbum'
+require_relative 'spec_helper'
 
 describe MusicAlbum do
   before :each do
@@ -13,7 +14,7 @@ describe MusicAlbum do
 
   context 'when MusicAlbum checking by name' do
     it 'should take parameter and return source object' do
-      @music_album.name.should eql 'Menhas'
+      @music_album.name.sh eql 'Menhas'
     end
   end
 end
