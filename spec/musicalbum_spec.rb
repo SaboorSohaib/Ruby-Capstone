@@ -1,14 +1,20 @@
-require '../classes/musicalbum.rb'
+require_relative '../classes/musicalbum'
+require_relative 'spec_helper'
 
 describe MusicAlbum do
-    before :each do
-        @musicalbum1 = MusicAlbum.new ('twilight' , '2000-23-01' , true)
-    end
+  before :each do
+    @music_album = MusicAlbum.new('Menhas', '2019-07-09', true)
+  end
 
-    context 'Creating MusicAlbum is instance of class will be @musicalbum1' do
-        it 'should take parameters and return source object' do
-            @musicalbum1.should be_an_instance_of MusicAlbum
-        end
+  context 'Creating MusicAlbum is instance of class will be @musicalbum1' do
+    it 'should take parameters and return source object' do
+      @music_album.should be_an_instance_of MusicAlbum
     end
-end
+  end
+
+  context 'when MusicAlbum checking by name' do
+    it 'should take parameter and return source object' do
+      @music_album.name.should eql 'Menhas'
+    end
+  end
 end
