@@ -17,14 +17,11 @@ describe Lable do
   end
 
   it 'should add item peoperly' do
-
     publisher = 'John'
-    cover_state = 'Good'
+    cover_state = 'good'
     publish_date = '02/02/03'
-    
+
     book = Book.new(publisher, cover_state, publish_date)
-    title = 'Javascript'
-    color = 'green'
     lable = Lable.new(title, color)
     lable.add_item(book)
     expect(lable.items.length).to eq 1
