@@ -1,5 +1,4 @@
 require_relative '../classes/musicalbum'
-require_relative 'spec_helper'
 
 describe MusicAlbum do
   before :each do
