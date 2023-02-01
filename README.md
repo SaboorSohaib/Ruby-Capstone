@@ -148,6 +148,10 @@ To run the project, execute the following command:
 
 - rspect.
 
+### Check Linter 
+
+- rubocop
+
 ### Deployment
 
 You can deploy this project using:
