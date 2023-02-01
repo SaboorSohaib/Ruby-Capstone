@@ -17,5 +17,5 @@ describe Game do
     it 'Can not use can_be_archived method when it private' do
       expect(@game).not_to respond_to(:can_be_archived?)
     end
-  end 
+  end
 end
