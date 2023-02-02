@@ -7,6 +7,7 @@ class App
     @books = []
     @lables = []
     @games = []
+    @authors = []
   end
 
   def add_book
