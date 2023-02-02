@@ -1,6 +1,8 @@
 require_relative './classes/book'
 require_relative './classes/lable'
 require_relative './item'
+require_relative './classes/game'
+require_relative './classes/author'
 
 class App
   def initialize
@@ -50,6 +52,23 @@ class App
   end
 
   def add_game
-    
+    puts 'Multiplayer:'
+    multiplayer = gets.chomp
+    puts 'last_played_at:'
+    last_played_at = gets.chomp
+    puts 'publish Date (yyyy-dd-mm):'
+    date = gets.chomp
+    game = Game.new(multiplayer, last_played_at, date)
+    @games.push(game)
+    puts 'Would you like to add author? (1)- Yes // (2)- No'
+    options = gets.chomp.to_i
+    return unless options == 1
+
+    puts 'Input First Name:'
+    first_name = gets.chomp
+    puts 'Input Last Name:'
+    last_name = gets.chomp
+    author = Author.new(first_name, last_name)
+    @authors.push(author)
   end
 end
