@@ -27,3 +27,13 @@ first_name  VARCHAR(50),
 last_name   VARCHAR(50),
 PRIMARY KEY (id)
 );
+
+CREATE TABLE book(
+id INT GENERATED ALWAYS AS IDENTITY,
+publish_date  DATE,
+archived  BOOLEAN,
+publisher VARCHAR(50),
+cover_state VARCHAR(20),
+lable_id INT REFERENCES lable (id),
+PRIMARY KEY (id)
+);
