@@ -7,3 +7,10 @@ author_id  INT  REFERENCES author(id),
 lable_id   INT  REFERENCES lable(id),
 PRIMARY KEY (id)
 );
+
+CREATE TABLE lable(
+id          INT GENERATED ALWAYS AS IDENTITY,
+title       VARCHAR(100),
+color       VARCHAR(100),
+PRIMARY KEY (id)
+);
