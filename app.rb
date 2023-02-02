@@ -81,4 +81,8 @@ class App
       end
     end
   end
+
+  def list_all_authors
+
+  end
 end
