@@ -14,3 +14,9 @@ title       VARCHAR(100),
 color       VARCHAR(100),
 PRIMARY KEY (id)
 );
+
+CREATE TABLE genre(
+id        INT GENERATED ALWAYS AS IDENTITY,
+name      VARCHAR(50),
+PRIMARY KEY (id)
+);
