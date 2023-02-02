@@ -34,7 +34,7 @@ class App
       puts "Sorry, We do not have any book\n\n"
     else
       @books.each do |bk|
-        puts "Publisher: #{bk.publisher} Cover: #{bk.cover_state} Publish Date: #{bk.publish_date}\n"
+        puts "Publisher:#{bk.publisher} Cover State:#{bk.cover_state} Publish Date:#{bk.publish_date}\n"
       end
     end
   end
@@ -43,7 +43,7 @@ class App
     if @lables.empty?
       puts "Sorry, We do not have any lables\n\n"
     else
-      @lables.each { |lab| puts "Lable Title: #{lab.title} of color #{lab.color}\n" }
+      @lables.each { |lab| puts "Lable Title:#{lab.title} color:#{lab.color}\n" }
     end
   end
 end
