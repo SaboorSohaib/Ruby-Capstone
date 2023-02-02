@@ -37,3 +37,12 @@ cover_state VARCHAR(20),
 lable_id INT REFERENCES lable (id),
 PRIMARY KEY (id)
 );
+
+CREATE TABLE musicalbum(
+id INT GENERATED ALWAYS AS IDENTITY,
+publish_date  DATE,
+archived  BOOLEAN,
+on_spotify BOOLEAN,
+genre_id INT REFERENCES genre (id),
+PRIMARY KEY (id)
+);
