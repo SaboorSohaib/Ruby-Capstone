@@ -73,6 +73,12 @@ class App
   end
 
   def list_all_games
-
+    if @games.empty?
+      puts "There are currently no games in the list\n\n"
+    else
+      @games.each do |game|
+        puts "Multiplayer:#{game.multiplayer} last played at:#{game.last_played_at} Publish Date:#{game.publish_date}\n"
+      end
+    end
   end
 end
