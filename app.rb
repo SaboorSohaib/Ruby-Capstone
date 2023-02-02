@@ -83,6 +83,10 @@ class App
   end
 
   def list_all_authors
-
+    if @authors.empty?
+      puts "Sorry, We do not have any authors\n\n"
+    else
+      @authors.each { |author| puts "First Name:#{author.first_name} Last Name:#{author.last_name}\n" }
+    end
   end
 end
