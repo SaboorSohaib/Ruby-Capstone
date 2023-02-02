@@ -71,4 +71,8 @@ class App
     author = Author.new(first_name, last_name)
     @authors.push(author)
   end
+
+  def list_all_games
+
+  end
 end
