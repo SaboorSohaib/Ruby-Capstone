@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 require_relative './app'
+# rubocop:disable Metrics/CyclomaticComplexity
+# rubocop:disable Metrics/MethodLength
 
 def main
   app = App.new
@@ -33,4 +35,6 @@ def main
     end
   end
 end
+# rubocop:enable Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/MethodLength
 main
