@@ -46,3 +46,13 @@ on_spotify BOOLEAN,
 genre_id INT REFERENCES genre (id),
 PRIMARY KEY (id)
 );
+
+CREATE TABLE game(
+id INT GENERATED ALWAYS AS IDENTITY,
+publish_date  DATE,
+archived  BOOLEAN,
+multiplayer VARCHAR(50),
+last_played_at DATE,
+author_id INT REFERENCES author (id),
+PRIMARY KEY (id)
+);
