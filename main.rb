@@ -7,7 +7,7 @@ def main
 
   puts "Welcome Catalog App!\n\n"
   while response != '4'
-    puts 'Please choose an option by enter in a number from 1 to 7:'
+    puts "Please choose an option by enter in a number from 1 to 7:\n\n"
     puts '1 - List all books'
     puts '2 - List all lables'
     puts '3 - Add a book'
