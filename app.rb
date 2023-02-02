@@ -48,4 +48,8 @@ class App
       @lables.each { |lab| puts "Lable Title:#{lab.title} color:#{lab.color}\n" }
     end
   end
+
+  def add_game
+    
+  end
 end
