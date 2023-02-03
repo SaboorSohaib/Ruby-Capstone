@@ -93,4 +93,21 @@ class App
       @authors.each { |author| puts "First Name:#{author.first_name} Last Name:#{author.last_name}\n" }
     end
   end
+
+  def add_music_album
+    print "Music Album Name : "
+    name = gets.chomp
+    print "Music Album publish_date : "
+    publish_date = gets.chomp
+    print "please select on_spotify? : "
+    on_spotify = gets.chomp
+    music = MusicAlbum.new(name, publish_date, on_spotify)
+    @musicalbums << music
+    print 'Would you like to add author? (1)- Yes // (2)- No'
+    options = gets.chomp.to_i
+    return unless options == 1
+
+    
+
+  end
 end
