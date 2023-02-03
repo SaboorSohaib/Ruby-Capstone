@@ -12,6 +12,8 @@ class App
     @lables = []
     @games = []
     @authors = []
+    @genres = []
+    @musicalbums = []
   end
 
   def add_book
