@@ -3,6 +3,8 @@ require_relative './classes/lable'
 require_relative './item'
 require_relative './classes/game'
 require_relative './classes/author'
+require_relative './classes/genre'
+require_relative './classes/musicalbum'
 
 class App
   def initialize
