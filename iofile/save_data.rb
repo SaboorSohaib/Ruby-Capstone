@@ -7,6 +7,7 @@ class SaveData
     return unless !File.exist?('./data/music_album.json') && filename == 'music_album'
 
     FileUtils.touch('./data/music_album.json')
+    FileUtils.touch('./data/games.json') if !File.exist?('./data/games.json') && filename == 'games'
   end
 
   def save_music_album(music)
@@ -25,5 +26,22 @@ class SaveData
 
     check_file_exists('music_album')
     File.write('./data/music_album.json', JSON.pretty_generate(music_album_array))
+  end
+
+  def save_games(games)
+    games_array = []
+    games.each do |game|
+      game_obj = {
+        publish_date: game.publish_date,
+        multiplayer: game.multiplayer,
+        last_played_at: game.last_played_at
+
+      }
+      games_array << game_obj
+    end
+    return if games_array.empty?
+
+    check_file_exists('games')
+    File.write('./data/games.json', JSON.pretty_generate(games_array))
   end
 end
