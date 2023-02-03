@@ -64,7 +64,7 @@ class App
     date = gets.chomp
     game = Game.new(multiplayer, last_played_at, date)
     @games.push(game)
-    puts 'Would you like to add author? (1)- Yes // (2)- No'
+    puts 'Would you like to add author? (1)- Yes // (2)- No : '
     options = gets.chomp.to_i
     return unless options == 1
 
@@ -95,31 +95,33 @@ class App
   end
 
   def add_music_album
-    print "Music Album Name📛 : "
+    print 'Music Album Name📛 : '
     name = gets.chomp
-    print "Music Album publish_date 📅: "
+    print 'Music Album publish_date 📅: '
     publish_date = gets.chomp
-    print "please select on_spotify? : "
+    print 'please select on_spotify? : '
     on_spotify = gets.chomp
     music = MusicAlbum.new(name, publish_date, on_spotify)
     @musicalbums << music
-    print 'Would you like to add author? (1)- Yes // (2)- No'
+    print 'Would you like to add author? (1)- Yes // (2)- No : '
     options = gets.chomp.to_i
     return unless options == 1
 
-    print "Genre name : "
+    print 'Genre name : '
     name = gets.chomp
     genre = Genre.new(name)
     @genres << genre
+    puts "Your Music Album Added Successfully🆗"
   end
 
   def list_all_genres
-   if @genres.empty?
-    print "The Genre List is empty! please add Genre🤐.\n\n"
-   else
-    puts "Genre list, count(#{@genres.count})🙋 :\n\n"
-    @genres.each_with_index do |genre, index|
-      puts "#{index + 1}) Name : '#{genre.name}, "
+    if @genres.empty?
+      print "The Genre List is empty! please add Genre🤐.\n\n"
+    else
+      puts "Genre list, count(#{@genres.count})🙋 :\n\n"
+      @genres.each_with_index do |genre, index|
+        puts "#{index + 1}) Name : '#{genre.name}, "
+      end
     end
   end
 
@@ -130,7 +132,7 @@ class App
       puts "Music Album list, count(#{@musicalbums.count})🎶 :\n\n"
       @musicalbums.each_with_index do |music, index|
         puts "#{index + 1}  Name : '#{music.name}'",
-        " Publish Date  : #{music.publish_date}",
+             " Publish Date  : #{music.publish_date}",
              " On_Spotify: #{music.on_spotify}"
       end
     end
