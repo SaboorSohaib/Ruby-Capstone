@@ -3,6 +3,7 @@ require_relative './classes/lable'
 require_relative './item'
 require_relative './classes/game'
 require_relative './classes/author'
+require 'json'
 
 class App
   def initialize
@@ -71,11 +72,11 @@ class App
   end
 
   def list_all_stored_books
-    if File.exist?('book.json') && File.zero?('book.json')
+    if File.exist?('book.json') && !File.zero?('book.json')
       bookfile = File.open('book.json')
       bookjson = bookfile.read
       JSON.parse(bookjson).map do |bk|
-        example = Book.new(bk['Publisher'], bk['Cover State'], ['Publish Date'])
+        example = Book.new(bk['publisher'], bk['cover_tate'], ['publish_Date'])
         @books.push(example)
       end
       bookfile.close
