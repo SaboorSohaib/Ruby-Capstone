@@ -13,7 +13,7 @@ class App
   def initialize
     @books = []
     @lables = []
-    @games = []
+    @games = ReadData.new.read_games
     @authors = []
     @genres = []
     list_all_stored_books
@@ -23,6 +23,7 @@ class App
 
   def quit_app
     SaveData.new.save_music_album(@musicalbums)
+    SaveData.new.save_games(@games)
   end
 
   def add_book
@@ -45,6 +46,7 @@ class App
     lable = Lable.new(tit, color)
     @lables.push(lable)
     all_lables_books
+    puts 'Your Book Added Successfully✅'
   end
 
   def all_lables_books
@@ -110,13 +112,13 @@ class App
   end
 
   def add_game
+    puts 'publish Date (yyyy-dd-mm):'
+    publish_date = gets.chomp
     puts 'Multiplayer:'
     multiplayer = gets.chomp
     puts 'last_played_at:'
     last_played_at = gets.chomp
-    puts 'publish Date (yyyy-dd-mm):'
-    date = gets.chomp
-    game = Game.new(multiplayer, last_played_at, date)
+    game = Game.new(publish_date, multiplayer, last_played_at)
     @games.push(game)
     puts 'Would you like to add author? (1)- Yes // (2)- No : '
     options = gets.chomp.to_i
@@ -128,14 +130,17 @@ class App
     last_name = gets.chomp
     author = Author.new(first_name, last_name)
     @authors.push(author)
+    puts 'Your Game Added Successfully✅'
   end
 
   def list_all_games
     if @games.empty?
       puts "There are currently no games in the list\n\n"
     else
-      @games.each do |game|
-        puts "Multiplayer:#{game.multiplayer} last played at:#{game.last_played_at} Publish Date:#{game.publish_date}\n"
+      @games.each_with_index do |game, index|
+        puts "#{index + 1})  publish_date : '#{game.publish_date}'",
+             "  Multiplayer  : '#{game.multiplayer}' ",
+             " last_played_at : '#{game.last_played_at}' "
       end
     end
   end

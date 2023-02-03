@@ -13,4 +13,17 @@ class ReadData
     file.close
     music_album
   end
+
+  def read_games
+    games = []
+    return games unless File.exist?('./data/games.json')
+
+    file = File.open('./data/games.json')
+    data = JSON.parse(file.read)
+    data.each do |game|
+      games << Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
+    end
+    file.close
+    games
+  end
 end
