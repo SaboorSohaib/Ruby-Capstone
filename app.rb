@@ -123,16 +123,16 @@ class App
     end
   end
 
-  # def list_all_music_album
-  #   if @musicalbums.empty?
-  #     print "The Music Album List is empty! please add Music🤐.\n\n"
-  #   else
-  #     puts "Music Album list, count(#{@musicalbums.count})🎶 :\n\n"
-  #     @musicalbums.each_with_index do |music, index|
-  #       puts "#{index + 1}  Name : '#{music.name}'",
-  #       " Publish Date  : #{music.publish_date}",
-  #            " On_Spotify: #{music.on_spotify}"
-  #     end
-  #   end
-  # end
+  def list_all_music_album
+    if @musicalbums.empty?
+      print "The Music Album List is empty! please add Music🤐.\n\n"
+    else
+      puts "Music Album list, count(#{@musicalbums.count})🎶 :\n\n"
+      @musicalbums.each_with_index do |music, index|
+        puts "#{index + 1}  Name : '#{music.name}'",
+        " Publish Date  : #{music.publish_date}",
+             " On_Spotify: #{music.on_spotify}"
+      end
+    end
+  end
 end
