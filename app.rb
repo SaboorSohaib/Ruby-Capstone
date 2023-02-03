@@ -95,9 +95,9 @@ class App
   end
 
   def add_music_album
-    print "Music Album Name : "
+    print "Music Album Name📛 : "
     name = gets.chomp
-    print "Music Album publish_date : "
+    print "Music Album publish_date 📅: "
     publish_date = gets.chomp
     print "please select on_spotify? : "
     on_spotify = gets.chomp
@@ -113,5 +113,26 @@ class App
     @genres << genre
   end
 
-  def 
+  def list_all_genres
+   if @genres.empty?
+    print "The Genre List is empty! please add Genre🤐.\n\n"
+   else
+    puts "Genre list, count(#{@genres.count})🙋 :\n\n"
+    @genres.each_with_index do |genre, index|
+      puts "#{index + 1}) Name : '#{genre.name}, "
+    end
+  end
+
+  # def list_all_music_album
+  #   if @musicalbums.empty?
+  #     print "The Music Album List is empty! please add Music🤐.\n\n"
+  #   else
+  #     puts "Music Album list, count(#{@musicalbums.count})🎶 :\n\n"
+  #     @musicalbums.each_with_index do |music, index|
+  #       puts "#{index + 1}  Name : '#{music.name}'",
+  #       " Publish Date  : #{music.publish_date}",
+  #            " On_Spotify: #{music.on_spotify}"
+  #     end
+  #   end
+  # end
 end
