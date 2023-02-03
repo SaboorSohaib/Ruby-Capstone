@@ -5,6 +5,7 @@ require_relative './classes/game'
 require_relative './classes/author'
 require_relative './classes/genre'
 require_relative './classes/musicalbum'
+require 'json'
 
 class App
   def initialize
@@ -14,6 +15,8 @@ class App
     @authors = []
     @genres = []
     @musicalbums = []
+    list_all_stored_books
+    list_all_stored_lables
   end
 
   def add_book
@@ -35,6 +38,23 @@ class App
     color = gets.chomp
     lable = Lable.new(tit, color)
     @lables.push(lable)
+    all_lables_books
+  end
+
+  def all_lables_books
+    bkjson = []
+    @books.each do |bk|
+      bkjson.push({ publisher: bk.publisher, cover_state: bk.cover_state, publish_date: bk.publish_date })
+    end
+    bookjson = JSON.generate(bkjson)
+    File.write('book.json', bookjson)
+
+    labjson = []
+    @lables.each do |lab|
+      labjson.push({ title: lab.title, color: lab.color })
+    end
+    lablejson = JSON.generate(labjson)
+    File.write('lable.json', lablejson)
   end
 
   def list_all_books
@@ -52,6 +72,34 @@ class App
       puts "Sorry, We do not have any lables\n\n"
     else
       @lables.each { |lab| puts "Lable Title:#{lab.title} color:#{lab.color}\n" }
+    end
+  end
+
+  def list_all_stored_books
+    if File.exist?('book.json') && !File.zero?('book.json')
+      bookfile = File.open('book.json')
+      bookjson = bookfile.read
+      JSON.parse(bookjson).map do |bk|
+        example = Book.new(bk['publisher'], bk['cover_state'], bk['publish_date'])
+        @books.push(example)
+      end
+      bookfile.close
+    else
+      File.new('book.json', 'w')
+    end
+  end
+
+  def list_all_stored_lables
+    if File.exist?('lable.json') && !File.zero?('lable.json')
+      lablefile = File.open('lable.json')
+      lablejson = lablefile.read
+      JSON.parse(lablejson).map do |lab|
+        lablexample = Lable.new(lab['title'], lab['color'])
+        @lables.push(lablexample)
+      end
+      lablefile.close
+    else
+      File.new('lable.json', 'w')
     end
   end
 
