@@ -1,4 +1,3 @@
-
 require_relative './classes/book'
 require_relative './classes/lable'
 require_relative './item'
@@ -56,16 +55,6 @@ class App
     end
     lablejson = JSON.generate(labjson)
     File.write('lable.json', lablejson)
-  end
-
-  def list_all_books
-    if @books.empty?
-      puts "Sorry, We do not have any book\n\n"
-    else
-      @books.each do |bk|
-        puts "Publisher:#{bk.publisher} Cover State:#{bk.cover_state} Publish Date:#{bk.publish_date}\n"
-      end
-    end
   end
 
   def list_all_books
