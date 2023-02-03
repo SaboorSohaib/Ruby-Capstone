@@ -5,6 +5,8 @@ require_relative './classes/game'
 require_relative './classes/author'
 require_relative './classes/genre'
 require_relative './classes/musicalbum'
+require_relative './iofile/read_data'
+require_relative './iofile/save_data'
 
 class App
   def initialize
@@ -13,7 +15,11 @@ class App
     @games = []
     @authors = []
     @genres = []
-    @musicalbums = []
+    @musicalbums = ReadData.new.read_music_album
+  end
+
+  def quit_app
+    SaveData.new.save_music_album(@musicalbums)
   end
 
   def add_book
@@ -111,7 +117,7 @@ class App
     name = gets.chomp
     genre = Genre.new(name)
     @genres << genre
-    puts 'Your Music Album Added Successfully🆗'
+    puts 'Your Music Album Added Successfully✅'
   end
 
   def list_all_genres
@@ -131,7 +137,7 @@ class App
     else
       puts "Music Album list, count(#{@musicalbums.count})🎶 :\n\n"
       @musicalbums.each_with_index do |music, index|
-        puts "#{index + 1}  Name : '#{music.name}'",
+        puts "#{index + 1})  Name : '#{music.name}'",
              " Publish Date  : #{music.publish_date}",
              " On_Spotify: #{music.on_spotify}"
       end
