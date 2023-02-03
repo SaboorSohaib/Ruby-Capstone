@@ -111,7 +111,7 @@ class App
     name = gets.chomp
     genre = Genre.new(name)
     @genres << genre
-    puts "Your Music Album Added Successfully🆗"
+    puts 'Your Music Album Added Successfully🆗'
   end
 
   def list_all_genres
