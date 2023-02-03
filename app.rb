@@ -94,6 +94,20 @@ class App
     end
   end
 
+  def list_all_stored_lables
+    if File.exist?('lable.json') && !File.zero?('lable.json')
+      lablefile = File.open('lable.json')
+      lablejson = lablefile.read
+      JSON.parse(lablejson).map do |lab|
+        lablexample = Lable.new(lab['title'], lab['color'])
+        @lables.push(lablexample)
+      end
+      lablefile.close
+    else
+      File.new('lable.json', 'w')
+    end
+  end
+
   def add_game
     puts 'Multiplayer:'
     multiplayer = gets.chomp
