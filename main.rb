@@ -38,7 +38,7 @@ def main
     when '8'
       app.add_music_album
     when '9'
-      puts 'Thank you for using this app!'
+      puts 'Thank you for using this app!😃'
     end
   end
 end
