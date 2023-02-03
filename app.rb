@@ -7,6 +7,7 @@ require_relative './classes/genre'
 require_relative './classes/musicalbum'
 require_relative './iofile/read_data'
 require_relative './iofile/save_data'
+require 'json'
 
 class App
   def initialize
@@ -15,6 +16,8 @@ class App
     @games = []
     @authors = []
     @genres = []
+    list_all_stored_books
+    list_all_stored_lables
     @musicalbums = ReadData.new.read_music_album
   end
 
