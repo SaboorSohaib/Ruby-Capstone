@@ -41,6 +41,7 @@ def main
     when '9'
       app.list_all_music_album
     when '10'
+      app.quit_app
       puts 'Thank you for using this app!😃'
     end
   end
