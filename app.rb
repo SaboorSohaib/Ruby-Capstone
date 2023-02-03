@@ -11,6 +11,7 @@ class App
     @games = []
     @authors = []
     list_all_stored_books
+    list_all_stored_lables
   end
 
   def add_book
@@ -32,8 +33,25 @@ class App
     color = gets.chomp
     lable = Lable.new(tit, color)
     @lables.push(lable)
+    all_lables_books
   end
 
+  def all_lables_books
+    bkjson = []
+    @books.each do |bk|
+      bkjson.push({ publisher: bk.publisher, cover_state: bk.cover_state, publish_date: bk.publish_date })
+    end
+    bookjson = JSON.generate(bkjson)
+    File.write('book.json', bookjson)
+
+    labjson = []
+    @lables.each do |lab|
+      labjson.push({ title: lab.title, color: lab.color })
+    end
+    lablejson = JSON.generate(labjson)
+    File.write('lable.json', lablejson)
+  end
+  
   def list_all_books
     if @books.empty?
       puts "Sorry, We do not have any book\n\n"
