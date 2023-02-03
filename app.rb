@@ -1,11 +1,15 @@
 require_relative './classes/book'
 require_relative './classes/lable'
 require_relative './item'
+require_relative './classes/game'
+require_relative './classes/author'
 
 class App
   def initialize
     @books = []
     @lables = []
+    @games = []
+    @authors = []
   end
 
   def add_book
@@ -44,6 +48,45 @@ class App
       puts "Sorry, We do not have any lables\n\n"
     else
       @lables.each { |lab| puts "Lable Title:#{lab.title} color:#{lab.color}\n" }
+    end
+  end
+
+  def add_game
+    puts 'Multiplayer:'
+    multiplayer = gets.chomp
+    puts 'last_played_at:'
+    last_played_at = gets.chomp
+    puts 'publish Date (yyyy-dd-mm):'
+    date = gets.chomp
+    game = Game.new(multiplayer, last_played_at, date)
+    @games.push(game)
+    puts 'Would you like to add author? (1)- Yes // (2)- No'
+    options = gets.chomp.to_i
+    return unless options == 1
+
+    puts 'Input First Name:'
+    first_name = gets.chomp
+    puts 'Input Last Name:'
+    last_name = gets.chomp
+    author = Author.new(first_name, last_name)
+    @authors.push(author)
+  end
+
+  def list_all_games
+    if @games.empty?
+      puts "There are currently no games in the list\n\n"
+    else
+      @games.each do |game|
+        puts "Multiplayer:#{game.multiplayer} last played at:#{game.last_played_at} Publish Date:#{game.publish_date}\n"
+      end
+    end
+  end
+
+  def list_all_authors
+    if @authors.empty?
+      puts "Sorry, We do not have any authors\n\n"
+    else
+      @authors.each { |author| puts "First Name:#{author.first_name} Last Name:#{author.last_name}\n" }
     end
   end
 end
