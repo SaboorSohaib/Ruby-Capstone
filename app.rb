@@ -107,7 +107,11 @@ class App
     options = gets.chomp.to_i
     return unless options == 1
 
-    
-
+    print "Genre name : "
+    name = gets.chomp
+    genre = Genre.new(name)
+    @genres << genre
   end
+
+  def 
 end
