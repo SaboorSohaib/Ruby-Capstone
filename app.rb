@@ -67,16 +67,6 @@ class App
     end
   end
 
-  def list_all_books
-    if @books.empty?
-      puts "Sorry, We do not have any book\n\n"
-    else
-      @books.each do |bk|
-        puts "Publisher:#{bk.publisher} Cover State:#{bk.cover_state} Publish Date:#{bk.publish_date}\n"
-      end
-    end
-  end
-
   def list_all_lables
     if @lables.empty?
       puts "Sorry, We do not have any lables\n\n"
