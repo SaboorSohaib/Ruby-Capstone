@@ -7,14 +7,19 @@ def main
   response = nil
 
   puts "Welcome Catalog App!\n\n"
-  while response != '7'
-    puts "Please choose an option by enter in a number from 1 to 7:\n\n"
+  while response != '10'
+    puts "Please choose an option by enter in a number from 1 to 10:\n\n"
     puts '1 - List all books'
     puts '2 - List all lables'
     puts '3 - Add a book'
     puts '4 - Add a game'
     puts '5 - List all games'
     puts '6 - List all authors'
+    puts '7 - List of all Genre'
+    puts '8 - Add music Album '
+    puts '9 - List of all Music Album'
+    puts '10 - Exit App'
+
     response = gets.chomp
     case response
     when '1'
@@ -30,7 +35,13 @@ def main
     when '6'
       app.list_all_authors
     when '7'
-      puts 'Thank you for using this app!'
+      app.list_all_genres
+    when '8'
+      app.add_music_album
+    when '9'
+      app.list_all_music_album
+    when '10'
+      puts 'Thank you for using this app!😃'
     end
   end
 end
