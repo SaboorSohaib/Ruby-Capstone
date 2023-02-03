@@ -44,6 +44,7 @@ class App
     color = gets.chomp
     lable = Lable.new(tit, color)
     @lables.push(lable)
+    all_lables_books
   end
 
   def all_lables_books
