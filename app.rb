@@ -52,7 +52,7 @@ class App
     lablejson = JSON.generate(labjson)
     File.write('lable.json', lablejson)
   end
-  
+
   def list_all_books
     if @books.empty?
       puts "Sorry, We do not have any book\n\n"
@@ -76,7 +76,7 @@ class App
       bookfile = File.open('book.json')
       bookjson = bookfile.read
       JSON.parse(bookjson).map do |bk|
-        example = Book.new(bk['publisher'], bk['cover_tate'], ['publish_Date'])
+        example = Book.new(bk['publisher'], bk['cover_state'], bk['publish_date'])
         @books.push(example)
       end
       bookfile.close
