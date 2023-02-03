@@ -10,6 +10,7 @@ class App
     @lables = []
     @games = []
     @authors = []
+    list_all_stored_books
   end
 
   def add_book
@@ -48,6 +49,34 @@ class App
       puts "Sorry, We do not have any lables\n\n"
     else
       @lables.each { |lab| puts "Lable Title:#{lab.title} color:#{lab.color}\n" }
+    end
+  end
+
+  def list_all_stored_books
+    if File.exist?('book.json') && File.zero?('book.json')
+      bookfile = File.open('book.json')
+      bookjson = bookfile.read
+      JSON.parse(bookjson).map do |bk|
+        example = Book.new(bk['Publisher'], bk['Cover State'], ['Publish Date'])
+        @books.push(example)
+      end
+      bookfile.close
+    else
+      File.new('book.json', 'w')
+    end
+  end
+
+  def list_all_stored_lables
+    if File.exist?('lable.json') && !File.zero?('lable.json')
+      lablefile = File.open('lable.json')
+      lablejson = lablefile.read
+      JSON.parse(lablejson).map do |lab|
+        lablexample = Lable.new(lab['title'], lab['color'])
+        @lables.push(lablexample)
+      end
+      lablefile.close
+    else
+      File.new('lable.json', 'w')
     end
   end
 
