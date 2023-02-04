@@ -7,6 +7,9 @@ require_relative './classes/genre'
 require_relative './classes/musicalbum'
 require_relative './iofile/read_data'
 require_relative './iofile/save_data'
+require_relative './classes/validate_date.rb'
+require 'colorize'
+require 'date'
 require 'json'
 
 class App
@@ -32,7 +35,7 @@ class App
     puts 'Cover State:'
     cover = gets.chomp
     puts 'publish Date (yyyy-dd-mm):'
-    date = gets.chomp.to_i
+    date = set_valid_date
     book = Book.new(publish, cover, date)
     @books.push(book)
     puts 'Would you like to add lable? (1)- Yes // (2)- No'
@@ -113,7 +116,7 @@ class App
 
   def add_game
     puts 'publish Date (yyyy-dd-mm):'
-    publish_date = gets.chomp.to_i
+    publish_date = set_valid_date
     puts 'Multiplayer:'
     multiplayer = gets.chomp
     puts 'last_played_at:'
