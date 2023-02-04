@@ -56,3 +56,8 @@ last_played_at DATE,
 author_id      INT REFERENCES author (id),
 PRIMARY KEY (id)
 );
+
+
+CREATE INDEX genre_id_index ON item(genre_id ASC);
+CREATE INDEX lable_id_index ON item(lalble_id ASC);
+CREATE INDEX author_id_index ON item(author_id ASC);
