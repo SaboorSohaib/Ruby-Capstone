@@ -10,8 +10,6 @@ class Lable
   end
 
   def add_item(item)
-    # @items.push(item)
-    # item.lable = self
     @items.push(item) unless @items.include?(item)
   end
 end
