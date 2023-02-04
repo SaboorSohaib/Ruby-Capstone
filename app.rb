@@ -152,7 +152,7 @@ class App
     color = gets.chomp
     lable = Lable.new(title, color)
     @lables.push(lable)
-    
+
     print 'Add genre name : '
     name = gets.chomp
     genre = Genre.new(name)
@@ -184,8 +184,8 @@ class App
   def add_music_album
     print 'Music Album Name📛 : '
     name = gets.chomp
-    print 'Music Album publish_date 📅: '
-    publish_date = gets.chomp
+    print 'Music Album publish_date(yyyy-dd-mm) 📅: '
+    publish_date = set_valid_date
     print 'please select on_spotify? : '
     on_spotify = gets.chomp
     music = MusicAlbum.new(name, publish_date, on_spotify)
