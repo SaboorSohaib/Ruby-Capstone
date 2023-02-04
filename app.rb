@@ -40,7 +40,7 @@ class App
     return unless options == 1
 
     puts 'Choose a title for lable:'
-    tit = gets.chomp
+    title = gets.chomp
     puts 'Choose a color for the lable:'
     color = gets.chomp
     lable = Lable.new(tit, color)
