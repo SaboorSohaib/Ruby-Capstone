@@ -48,6 +48,18 @@ class App
     color = gets.chomp
     lable = Lable.new(title, color)
     @lables.push(lable)
+
+    puts 'Add first name : '
+    first_name = gets.chomp
+    puts 'Add last name : '
+    last_name = gets.chomp
+    author = Author.new(first_name, last_name)
+    @authors.push(author)
+
+    print 'Add genre name : '
+    name = gets.chomp
+    genre = Genre.new(name)
+    @genres.push(genre)
     all_lables_books
     puts 'Your Book Added Successfully✅'
   end
@@ -120,7 +132,7 @@ class App
     puts 'Multiplayer:'
     multiplayer = gets.chomp
     puts 'last_played_at:'
-    last_played_at = gets.chomp
+    last_played_at = set_valid_date
     game = Game.new(publish_date, multiplayer, last_played_at)
     @games.push(game)
     puts 'Would you like to add author? (1)- Yes // (2)- No : '
@@ -169,7 +181,21 @@ class App
     options = gets.chomp.to_i
     return unless options == 1
 
-    print 'Genre name : '
+    print 'Add first name : '
+    first_name = gets.chomp
+    print 'Add last name : '
+    last_name = gets.chomp
+    author = Author.new(first_name, last_name)
+    @authors << author
+
+    print 'Add title : '
+    title = gets.chomp
+    print 'Add color : '
+    color = gets.chomp
+    lable = Lable.new(title, color)
+    @lables << lable
+
+    print 'Add genre name : '
     name = gets.chomp
     genre = Genre.new(name)
     @genres << genre
