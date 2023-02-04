@@ -32,7 +32,7 @@ class App
     puts 'Cover State:'
     cover = gets.chomp
     puts 'publish Date (yyyy-dd-mm):'
-    date = gets.chomp
+    date = gets.chomp.to_i
     book = Book.new(publish, cover, date)
     @books.push(book)
     puts 'Would you like to add lable? (1)- Yes // (2)- No'
@@ -113,7 +113,7 @@ class App
 
   def add_game
     puts 'publish Date (yyyy-dd-mm):'
-    publish_date = gets.chomp
+    publish_date = gets.chomp.to_i
     puts 'Multiplayer:'
     multiplayer = gets.chomp
     puts 'last_played_at:'
