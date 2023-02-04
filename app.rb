@@ -43,7 +43,7 @@ class App
     title = gets.chomp
     puts 'Choose a color for the lable:'
     color = gets.chomp
-    lable = Lable.new(tit, color)
+    lable = Lable.new(title, color)
     @lables.push(lable)
     all_lables_books
     puts 'Your Book Added Successfully✅'

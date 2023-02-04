@@ -16,14 +16,14 @@ class Item
     label.add_item(label)
   end
 
-  def author=(author)
-    @author = author
-    author.items.push(self) unless author.items.include?(self)
-  end
-
   def add_genre(genre)
     @genre = genre
     genre.add_item(genre)
+  end
+
+  def add_author(author)
+    @author = author
+    author.add_item(author)
   end
 
   private
