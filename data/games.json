@@ -1,0 +1,22 @@
+[
+  {
+    "publish_date": "2345",
+    "multiplayer": "awesome",
+    "last_played_at": "june 5"
+  },
+  {
+    "publish_date": 2021,
+    "multiplayer": "true",
+    "last_played_at": "augest"
+  },
+  {
+    "publish_date": "2013-05-10",
+    "multiplayer": "",
+    "last_played_at": ""
+  },
+  {
+    "publish_date": "2019-04-10",
+    "multiplayer": "yes",
+    "last_played_at": "2015-05-09"
+  }
+]
