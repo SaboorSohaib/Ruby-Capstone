@@ -12,9 +12,9 @@ describe Genre do
     end
   end
 
-#   context 'when Genre checking by name' do
-#     it 'should take parameter and return source object' do
-#       @genre.name.should eql 'Rashid Menhas'
-#     end
-#   end
+  context 'when Genre checking by name' do
+    it 'should take parameter and return source object' do
+      @genre.name.should eql 'Rashid Menhas'
+    end
+  end
 end
