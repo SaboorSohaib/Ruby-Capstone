@@ -168,9 +168,9 @@ You can deploy this project using:
 
 👤 **Abdul Saboor Sohaib**
 
-- GitHub: [@SaboorSohaib](https://github.com/SaboorSohaib)
-- Twitter: [@SaboorSohaib](https://twitter.com/absaboorsohaib)
-- LinkedIn: [@SaboorSohaib](https://www.linkedin.com/in/abdul-saboor-sohaib/)
+- GitHub: [![SaboorSohaib](https://img.shields.io/badge/-SaboorSohaib-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/SaboorSohaib)
+- Twitter: [![absaboorsohaib](https://img.shields.io/badge/-absaboorsohaib-blue?logo=Twitter&logoColor=skyBlue&style=plastic)](https://twitter.com/absaboorsohaib)
+- LinkedIn: [![abdul-saboor-sohaib](https://img.shields.io/badge/-AbdulSaboorSohaib-white?logo=LinkedIn&logoColor=181717&style=plastic)](https://www.linkedin.com/in/abdul-saboor-sohaib/)
 
 👤 **Ayodeji Abidemi**
 
