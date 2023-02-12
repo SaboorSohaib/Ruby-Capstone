@@ -121,7 +121,7 @@ To run the project, execute the following command:
 
 ### Run tests
 
-- rspect.
+- rspec.
 
 ### Check Linter 
 
