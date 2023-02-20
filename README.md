@@ -68,8 +68,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **We use OOP concept**
 - **Users can add different books, albums and games and can see them back**
 - **We have database for our data too**
