@@ -172,7 +172,7 @@ You can deploy this project using:
 
 - [ ] - **Add new movie**
 - [ ] - **Add new source**
--  [ ] - **Add new Music album**
+- [ ] - **Add new Music album**
 - [ ] - **List all music albums**
 
 
