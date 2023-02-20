@@ -105,8 +105,6 @@ Clone this repository to your desired folder:
 
  - git clone [(https://github.com/SaboorSohaib/Ruby-Capstone.git)]
 
-
-
 ### Usage
 
 To run the project, execute the following command:
@@ -132,8 +130,6 @@ You can deploy this project using:
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
-> Mention all of the collaborators of this project.
 
 👤 **Abdul Saboor Sohaib**
 
