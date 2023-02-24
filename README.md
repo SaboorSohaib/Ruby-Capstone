@@ -108,7 +108,6 @@ In order to run this project you need:
 Clone this repository to your desired folder:
  - mkdir my-folder
  - cd my-folder
-
  - git clone [(https://github.com/SaboorSohaib/Ruby-Capstone.git)]
 
 ### Usage
