@@ -125,12 +125,12 @@ class App
     options = gets.chomp.to_i
     return unless options == 1
 
-    print 'Add genre name : '
-    name = gets.chomp
-    genre = Genre.new(name)
-    @genres.push(genre)
-
-    puts 'Your Game Added Successfully✅'
+    puts 'Input First Name:'
+    first_name = gets.chomp
+    puts 'Input Last Name:'
+    last_name = gets.chomp
+    author = Author.new(first_name, last_name)
+    @authors.push(author)
   end
 
   def list_all_games
