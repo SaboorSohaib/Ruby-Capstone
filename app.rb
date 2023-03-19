@@ -131,14 +131,7 @@ class App
     last_name = gets.chomp
     author = Author.new(first_name, last_name)
     @authors.push(author)
-
-    puts 'Choose a title for lable:'
-    title = gets.chomp
-    puts 'Choose a color for the lable:'
-    color = gets.chomp
-    lable = Lable.new(title, color)
-    @lables.push(lable)
-
+    
     print 'Add genre name : '
     name = gets.chomp
     genre = Genre.new(name)
