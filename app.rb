@@ -173,13 +173,6 @@ class App
     author = Author.new(first_name, last_name)
     @authors << author
 
-    print 'Add title : '
-    title = gets.chomp
-    print 'Add color : '
-    color = gets.chomp
-    lable = Lable.new(title, color)
-    @lables << lable
-
     print 'Add genre name : '
     name = gets.chomp
     genre = Genre.new(name)
