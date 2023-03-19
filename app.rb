@@ -131,13 +131,6 @@ class App
     last_name = gets.chomp
     author = Author.new(first_name, last_name)
     @authors.push(author)
-    
-    print 'Add genre name : '
-    name = gets.chomp
-    genre = Genre.new(name)
-    @genres.push(genre)
-
-    puts 'Your Game Added Successfully✅'
   end
 
   def list_all_games
