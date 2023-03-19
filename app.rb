@@ -166,12 +166,11 @@ class App
     options = gets.chomp.to_i
     return unless options == 1
 
-    print 'Add first name : '
-    first_name = gets.chomp
-    print 'Add last name : '
-    last_name = gets.chomp
-    author = Author.new(first_name, last_name)
-    @authors << author
+    print 'Add genre name : '
+    name = gets.chomp
+    genre = Genre.new(name)
+    @genres << genre
+    puts 'Your Music Album Added Successfully✅'
   end
 
   def list_all_genres
