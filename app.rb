@@ -49,13 +49,6 @@ class App
     lable = Lable.new(title, color)
     @lables.push(lable)
 
-    puts 'Add first name : '
-    first_name = gets.chomp
-    puts 'Add last name : '
-    last_name = gets.chomp
-    author = Author.new(first_name, last_name)
-    @authors.push(author)
-
     print 'Add genre name : '
     name = gets.chomp
     genre = Genre.new(name)
