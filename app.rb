@@ -48,13 +48,6 @@ class App
     color = gets.chomp
     lable = Lable.new(title, color)
     @lables.push(lable)
-
-    print 'Add genre name : '
-    name = gets.chomp
-    genre = Genre.new(name)
-    @genres.push(genre)
-    all_lables_books
-    puts 'Your Book Added Successfully✅'
   end
 
   def all_lables_books
